@@ -27,14 +27,15 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
+    justify-content: center;
 }
 
 nav li {
-    margin-right: 20px;
+    margin: 0 10px;
 }
 
-nav li:last-child {
-    margin-right: 0;
+nav ul li:first {
+    margin-right: 20px;
 }
 
 nav a {
@@ -45,9 +46,41 @@ nav a {
 /* Styles du main */
 main {
     padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 section {
     margin-bottom: 20px;
 }
 
+/* Styles du footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Styles responsifs pour les appareils mobiles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
